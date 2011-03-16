@@ -270,7 +270,7 @@ body:before {
 
 #donations>li h3 a:hover,
 #donations>li.active h3 a {
-	background: inherit;
+	background: transparent;
 	color: #fff;
 }
 
