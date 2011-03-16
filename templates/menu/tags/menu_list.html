@@ -1,0 +1,4 @@
+{% for item in menu %}
+<a href="{{ item.url }}"{% if item.rel %} rel="{{ item.rel }}"{% endif %}>{{ item.text }}</a>
+{% endfor %}
+

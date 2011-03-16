@@ -1,0 +1,320 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font: 14px 'Trebuchet MS',Arial,sans-serif;
+}
+
+a {
+	color: #03c;
+}
+
+p {
+	margin: 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+	overflow: hidden;
+	padding-top: 1em;
+	padding-bottom: .17em;
+	width: auto;
+}
+
+h1 {
+	border-bottom: 1px solid #aaa;
+	padding-top: 0;
+	margin-bottom: .5em;
+	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+h4, h5, h6 {
+	font-size: 1em;
+}
+
+/* NAV begin */
+nav {
+	display: block;
+	background: #f6f6f6 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAIAAAArRUU2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADpJREFUeF5VjUkOAEAIwoD//7lzGJd4MJHGSoBImkFETP67CdLldUd7KC6f8fv3+psd8znbtU5x354HaWQjOx76v7MAAAAASUVORK5CYII=') 0 0 repeat-x;
+	width: 160px;
+	padding: 10px 0 0;
+	margin: 0;
+	border-right: 1px solid #a7d7f9;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+nav a {
+	margin: 3px 0 3px 30px;
+	float: left;
+	clear: left;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav a:first-child {
+	margin-left: 13px;
+	margin-bottom: 16px;
+	display: block;
+	width: 135px;
+	height: 135px;
+	background: url('/static/img/wmru-logo.png') 0 0 no-repeat;
+	text-indent: -10000px;
+	text-decoration: none !important;
+}
+/* NAV end */
+
+
+article {
+	display: block;
+	padding: 45px 40px 0;
+	margin-left: 160px;
+	max-width: 800px;
+	text-align: justify;
+}
+
+footer {
+	display: block;
+	background: #f6f6f6;
+	border-top: 1px solid #a7d7f9;
+	padding: 0 28px;
+	margin-left: 160px;
+	font-size: smaller;
+	color: #666;
+}
+
+/* DL begin */
+dl {
+	text-align: left;
+	line-height: 1.6em;
+}
+
+dt {
+	clear: left;
+	float: left;
+	font-weight: bold;
+	margin-right: 1ex;
+}
+
+dd {
+	margin-left: 6ex;
+}
+
+dd dl {
+	padding-top: 1.6em; /* == dl { line-height } */
+	margin: 0;
+}
+
+dd dt {
+	font-weight: inherit;
+}
+/* DL end */
+
+
+/* .LIST begin */
+.list {
+	text-align: left;
+	border: 1px solid #aaa;
+	border-collapse: collapse;
+	margin-top: 2em;
+}
+
+.list th {
+	border: 1px solid #aaa;
+	background: #f6f6f6;
+	padding: 0.2em 1ex;
+}
+
+.list td {
+	border: 1px solid #aaa;
+	padding: 0.4em 1ex;
+	vertical-align: top;
+}
+
+.list td ul {
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+
+.list col.date {
+	width: 15ex;
+}
+
+.list td.empty {
+	text-align: center;
+	vertical-align: middle;
+}
+/* .list end */
+
+/* Links decoration begin */
+a {
+	background: transparent right center no-repeat;
+}
+
+a[href^="mailto:"] {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRF////////iIqF9vb26urpycfDvb275eXj2djV+/v4srKy6efio6GcqKejsa6q8fDtVM9qIQAAAAF0Uk5TAEDm2GYAAABOSURBVHheBcExDkAwGIDRL43NpJOt6a9hMdVilP8gklqsHMJmt4qeyeI03oNSNkCrAIU/7YTWbwp0zz4rTXZHxF/9YA15HTG4+4NFRNofUBMMOBBNZngAAAAASUVORK5CYII=');
+	padding-right: 13px;
+}
+
+a[href$=".pdf"], a[href$=".PDF"],
+a[href*=".pdf#"], a[href*=".PDF#"],
+a[href*=".pdf?"], a[href*=".PDF?"] {
+	background-image: url('data:image/gif;base64,R0lGODlhEAAQAMQfAOmNjMfHx9UqJ3Fvb9hoZqmpqbe3t96pqPn4%2BIeHh9ra2qRSUOXl5dtFQ9i2turq6uDg4NTT0%2B7u7uzMy%2FDX15OTk9%2FEw99%2Bfa89PN%2BYl%2FHp6eLi4vPz8%2Fv7%2B%2F%2F%2F%2F%2F%2F%2F%2FyH5BAEAAB8ALAAAAAAQABAAAAWgoCeO5PidHhOtQWC8ReyhEdLdOB5Usxd1HARnSOy0eD4gkUO5UHAJUaAjqVYBl8zjgYh6pg%2FJ9mFpZBiMrsjQGaMZDQsEovYYEI%2F3hiEQWBQcA2scaBtzBxkZcRoDCB4FhBuGEBcOCg19GBePHJJzCgQEDQQZBxgAjwiTChcNlSuBIhVpHBMNDRRiDxwKgo8JFQkCGAsJA8fHXiQAuCUjIQA7');
+	padding-right: 18px;
+}
+/* Links decoration end */
+
+/* Sticky Footer begin - cssstickyfooter.com */
+#wrap {
+	min-height: 100%;
+}
+
+article {
+	overflow: auto;
+	padding-bottom: 100px;
+}
+
+footer {
+	position: relative;
+	margin-top: -60px;
+	height: 40px;
+	padding-top: 20px;
+	clear: both;
+}
+
+body:before {
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px;
+}
+/* Sticky Footer end */
+
+/* Donations begin */
+#donations {
+	padding-left: 0;
+}
+
+#donations>li {
+	height: 22px;
+	overflow: hidden;
+	text-align: left;
+	margin-bottom: 0.5em;
+	border: 1px solid #fff;
+}
+
+#donations>li.active {
+	height: auto;
+	overflow: visible;
+	border: 1px solid #ccc;
+}
+
+#donations>li h3 {
+	height: 22px;
+	padding: 0;
+	margin: 0;
+}
+
+#donations>li h3 img {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 3px;
+}
+
+#donations>li h3 a {
+	height: 100%;
+	display: block;
+	margin: 0;
+	padding: 0 26px;
+	color: #000;
+	text-decoration: none;
+	background: white;
+	overflow: visible;
+}
+
+#donations>li h3 a span {
+	border-bottom: 1px dashed #000;
+}
+
+#donations>li h3 a:hover,
+#donations>li.active h3 a {
+	background: inherit;
+	color: #fff;
+}
+
+#donations>li h3 a:hover span,
+#donations>li.active h3 a span{
+	border-bottom: 0px dashed #fff;
+}
+
+#donations>li .d-form,
+#donations>li .d-note {
+	background: #f1f5fa;
+	padding: 10px 26px;
+}
+
+#donations>li .d-form label {
+	display: block;
+}
+
+#donations>li .d-form input[type=tel] {
+	width: 14ex;
+	margin-left: 2.5ex;
+}
+
+#donations>li .d-form input[type=text] {
+	width: 9ex;
+	margin-left: 1ex;
+}
+
+#donations>li .d-form input[type=submit] {
+	margin-left: 23ex;
+}
+
+#donations>li ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#donations>li ul li {
+	padding-left: 16px;
+	text-indent: -2.2ex;
+}
+
+#donations>li ul li:before {
+	content: "— ";
+}
+
+#donations>li .d-text {
+	padding: 10px 26px;
+}
+
+#donations>li .d-note {
+	font-size: smaller;
+}
+/* Donations end */
+

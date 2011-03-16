@@ -1,0 +1,30 @@
+<script type="text/javascript" src="{{ STATIC_URL }}js/donations.js"></script>
+<ul id="donations">
+{% for d in donations %}
+	<li id="donate-{{ d.anchor }}">
+		{% if d.form_url %}<form action="{{ d.form_method }}" action="{{ d.form_url }}" accept-charset="utf-8">{% endif %}
+			<h3{% if d.color %} style="background:{{ d.color|lower }}"{% endif %}>{% if d.icon %}<img src="{{ MEDIA_URL }}{{ d.icon }}" alt="" />{% endif %}<a href="#" name="{{ d.anchor }}" onclick="donate_block('{{ d.anchor }}'); return false"><span>{{ d.title|safe }}</span></a></h3>
+			
+			{% if d.hidden %}
+			<div class="d-hidden">{{ d.hidden|safe }}</div>
+			{% endif %}
+			
+			{% if d.amount %}
+			<div class="d-form">
+				{% if d.phone %}<label>Мобильный телефон: <input type="tel" name="phone" placeholder="+79000000000" /></label>{% endif %}
+				<label>Сумма пожертвования: <input type="text" name="amount" placeholder="500" /> руб.</label>
+				<input type="submit" value="{{ d.submit_text|default:'Пожертвовать' }}" />
+			</div>
+			{% endif %}
+			
+			{% if d.text %}
+			<div class="d-text">{{ d.text|safe }}</div>
+			{% endif %}
+			
+			{% if d.footnote  %}
+			<div class="d-note">{{ d.footnote|safe }}</div>
+			{% endif %}
+		{% if d.form_url %}</form>{% endif %}
+	</li>
+{% endfor %}
+</ul>
