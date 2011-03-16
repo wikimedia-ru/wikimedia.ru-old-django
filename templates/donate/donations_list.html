@@ -4,7 +4,7 @@
 	<li id="donate-{{ d.anchor }}">
 		<span id="{{ d.anchor }}"></span>
 		{% if d.form_url %}<form method="{{ d.form_method }}" action="{{ d.form_url }}" accept-charset="utf-8">{% endif %}
-			<h3{% if d.color %} style="background:{{ d.color|lower }}"{% endif %}>{% if d.icon %}<img src="{{ MEDIA_URL }}{{ d.icon }}" alt="" />{% endif %}<a href="#" onclick="donate_block('{{ d.anchor }}'); return false"><span>{{ d.title|safe }}</span></a></h3>
+			<h3{% if d.color %} style="background:{{ d.color|lower }}"{% endif %}>{% if d.icon %}<img src="{{ MEDIA_URL }}{{ d.icon }}" alt="" />{% endif %}<a href="#{{ d.anchor }}" onclick="donate_block('{{ d.anchor }}'); return false"><span>{{ d.title|safe }}</span></a></h3>
 
 			{% if d.hidden %}
 			<div class="d-hidden">{{ d.hidden|safe }}</div>
