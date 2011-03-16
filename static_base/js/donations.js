@@ -1,10 +1,14 @@
 function donate_block_run(id) {
 	var block = $('#donate-' + id);
 	if (block.length == 0) {
+		$('#donations>li').removeClass('active');
 		return;
 	}
 	if (block.hasClass('active')) {
 		$('#donate-' + id).removeClass('active');
+		if (window.location.hash != '#' + id) {
+			window.location.hash = '';
+		}
 	}
 	else {
 		$('#donations>li').removeClass('active');
@@ -15,11 +19,18 @@ function donate_block_run(id) {
 function donate_block(id) {
 	if (window.location.hash != '#' + id) {
 		window.location.hash = '#' + id;
+		if ('onhashchange' in window) {
+			return;
+		}
+		donate_block_run(id);
 	}
-	if ('onhashchange' in window) {
-		return;
+	else {
+		window.location.hash = '';
+		if ('onhashchange' in window) {
+			return;
+		}
+		donate_block_run('');
 	}
-	donate_block_run(id);
 }
 
 function donate_hash_change() {
