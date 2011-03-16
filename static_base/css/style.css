@@ -223,6 +223,7 @@ body:before {
 /* Donations begin */
 #donations {
 	padding-left: 0;
+	list-style-type: none;
 }
 
 #donations>li {
