@@ -56,7 +56,7 @@ def page(request, url, section = None):
     f = urllib.urlopen(url, params)
     text = f.read().decode('utf-8')
     
-    h = Hyphenator('/usr/share/myspell/dicts/hyph_ru_RU.dic', 4, 4)
+    h = Hyphenator('/usr/share/hyphen/hyph_ru_RU.dic', 4, 4)
     text = re.sub(r'\s&shy;|&shy;\s', ' ', h.inserted(text, '&shy;')).replace('&shy;', u'\u00AD')
     '''
 
