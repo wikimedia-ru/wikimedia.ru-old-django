@@ -20,9 +20,9 @@ class Page(models.Model):
 class PageFile(models.Model):
     def make_upload_path(instance, filename):
         if instance.page.section:
-            return u"%s/%s/%s/%s" % (settings.MEDIA_ROOT, instance.page.section.url, instance.page.url, filename)
+            return u"%s/%s/%s/%s" % (settings.MEDIA_URL, instance.page.section.url, instance.page.url, filename)
         else:
-            return u"%s/%s/%s" % (settings.MEDIA_ROOT, instance.page.url, filename)
+            return u"%s/%s/%s" % (settings.MEDIA_URL, instance.page.url, filename)
     
     page = models.ForeignKey('Page', verbose_name=_("Page"))
     file = models.FileField(upload_to=make_upload_path, blank=True, null=True, verbose_name=_("File"))
