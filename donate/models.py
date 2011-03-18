@@ -17,8 +17,8 @@ class Donation(models.Model):
     form_method = models.CharField(max_length=4, choices=METHOD_CHOICES, default='get', verbose_name=_("Form method"))
     form_url = models.URLField(verify_exists=False, blank=True, null=True, max_length=250, verbose_name=_("Form submit URL"))
 
-    phone = models.BooleanField(default=False, verbose_name=_("Phone field"))
-    amount = models.BooleanField(default=True, verbose_name=_("Amount field"))
+    phone_id = models.SlugField(max_length=50, blank=True, null=True, verbose_name=_("Phone field id"))
+    amount_id = models.SlugField(max_length=50, blank=True, null=True, verbose_name=_("Amount field id"))
     submit_text = models.CharField(max_length=100, blank=True, null=True, verbose_name=_("Submit button text"))
 
     text = models.TextField(blank=True, verbose_name=_("HTML text"))
