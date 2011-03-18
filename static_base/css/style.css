@@ -314,8 +314,13 @@ body:before {
 	line-height: 2em;
 }
 
-#donations>li .d-form input {
+#donations>li .d-form input,
+#donations>li .d-form .d-tpl {
 	margin-left: 164px;
+}
+
+#donations>li .d-form .d-tpl input {
+	margin-left: 0;
 }
 
 #donations>li .d-form input[type=tel] {
@@ -324,6 +329,10 @@ body:before {
 
 #donations>li .d-form input[type=text] {
 	width: 73px;
+}
+
+#donations>li .d-form .d-tpl input[type=text] {
+	width: auto;
 }
 
 #donations>li .d-form input[type=submit] {

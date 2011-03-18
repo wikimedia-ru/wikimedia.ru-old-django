@@ -10,10 +10,10 @@
 			<div class="d-hidden">{{ d.hidden|safe }}</div>
 			{% endif %}
 			
-			{% if d.amount %}
+			{% if d.amount_id %}
 			<div class="d-form">
-				{% if d.phone %}<label><span>Мобильный телефон:</span> <input type="tel" name="phone" placeholder="+79000000000" /></label>{% endif %}
-				<label><span>Сумма пожертвования:</span> <input type="text" name="amount" placeholder="500" /> руб.</label>
+				{% if d.phone_id %}<label><span>Мобильный телефон:</span> {% if d.phone_tpl %}{{ d.phone_tpl|safe }}{% else %}<input type="tel" name="{{ d.phone_id }}" placeholder="+79000000000" />{% endif %}</label>{% endif %}
+				<label><span>Сумма пожертвования:</span> <input type="text" name="{{ d.amount_id }}" placeholder="500" /> руб.</label>
 				<input type="submit" value="{{ d.submit_text|default:'Пожертвовать' }}" />
 			</div>
 			{% endif %}
