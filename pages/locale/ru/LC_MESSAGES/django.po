@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-12 03:38+0300\n"
+"POT-Creation-Date: 2011-03-19 06:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Sergey Leschina <i.am.putnik@gmail.com>\n"
 "Language-Team: RU <LL@li.org>\n"
@@ -18,30 +18,38 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: models.py:5
+#: models.py:7
 msgid "Title"
 msgstr "Заголовок"
 
-#: models.py:6
+#: models.py:8
 msgid "Extend default title"
 msgstr "Добавлять к стандартному заголовку"
 
-#: models.py:7
+#: models.py:9
 msgid "Section"
 msgstr "Раздел"
 
-#: models.py:8
+#: models.py:10
 msgid "URL"
 msgstr "URL"
 
-#: models.py:9
+#: models.py:11
 msgid "Old URL"
 msgstr "Старый URL"
 
-#: models.py:10
+#: models.py:12
 msgid "HTML text"
 msgstr "HTML-текст"
 
-#: models.py:11
+#: models.py:13
 msgid "Active page"
 msgstr "Активная страница"
+
+#: models.py:32
+msgid "Page"
+msgstr "Страница"
+
+#: models.py:33
+msgid "File"
+msgstr "Файл"
