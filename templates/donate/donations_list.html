@@ -12,7 +12,7 @@
 			
 			{% if d.amount_id %}
 			<div class="d-form">
-				{% if d.phone_id %}<label><span>Мобильный телефон:</span> {% if d.phone_tpl %}{{ d.phone_tpl|safe }}{% else %}<input type="tel" name="{{ d.phone_id }}" placeholder="+79000000000" autocomplete="on" pattern="\+\d{11}" required="required" />{% endif %}</label>{% endif %}
+				{% if d.phone_id %}<label><span>Мобильный телефон:</span> +7 <input type="tel" name="{{ d.phone_id }}" placeholder="9000000000" autocomplete="on" pattern="\d{10}" required="required" /></label>{% endif %}
 				<label><span>Сумма пожертвования:</span> <input type="text" name="{{ d.amount_id }}" placeholder="500" pattern="\d+" required="required" /> руб.</label>
 				<input type="submit" value="{{ d.submit_text|default:'Пожертвовать' }}" />
 			</div>
