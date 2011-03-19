@@ -1,0 +1,22 @@
+article a {
+	padding-right: 0 !important;
+	background-image: none !important;
+}
+
+nav a {
+	white-space: nowrap;
+}
+
+#donations>li h3 a {
+	padding-left: 4px;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+dd dl {
+	padding-top: 0;
+	margin-top: 1.6em;
+}
