@@ -100,6 +100,9 @@ article {
 	margin-left: 160px;
 	max-width: 800px;
 	text-align: justify;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
 }
 
 footer {
