@@ -1,5 +1,6 @@
-*.pyc
 *~
-media
-static
-settings_local.py
+*.pyc
+/settings_local.py
+/gunicorn.conf.py
+/static/*
+/media/*
