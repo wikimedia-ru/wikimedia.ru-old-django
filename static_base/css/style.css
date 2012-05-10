@@ -482,3 +482,13 @@ div.gallerytext {
 	word-wrap: break-word;
 }
 /* MediaWiki styles end */
+
+/* Blog begin */
+.entry-header {
+	clear: both;
+}
+
+.entry-footer {
+	margin-bottom: 50px;
+}
+/* Blog end */
