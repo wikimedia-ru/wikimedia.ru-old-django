@@ -467,4 +467,18 @@ li.gallerybox {
 	display: -moz-inline-box;
 	display: inline-block;
 }
+
+li.gallerybox div.thumb {
+	text-align: center;
+	border: 1px solid #CCC;
+	background-color: #F9F9F9;
+	margin: 2px;
+}
+
+div.gallerytext {
+	overflow: hidden;
+	font-size: 94%;
+	padding: 2px 4px;
+	word-wrap: break-word;
+}
 /* MediaWiki styles end */
