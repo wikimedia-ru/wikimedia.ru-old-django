@@ -411,6 +411,11 @@ div.thumb {
 	background-color: transparent;
 }
 
+div.thumb a {
+	padding-right: 0;
+	background: transparent;
+}
+
 div.tright {
 	margin: .5em 0 1.3em 1.4em;
 }
@@ -433,5 +438,16 @@ html .thumbcaption {
 	line-height: 1.4em;
 	padding: 3px !important;
 	font-size: 94%;
+}
+
+.magnify {
+	float: right;
+}
+
+div.magnify a,
+div.magnify img {
+	display: block;
+	border: none !important;
+	background: none !important;
 }
 /* MediaWiki styles end */
