@@ -450,4 +450,21 @@ div.magnify img {
 	border: none !important;
 	background: none !important;
 }
+
+ul.gallery {
+	margin: 2px;
+	padding: 2px;
+	display: block;
+}
+
+ul.gallery,
+li.gallerybox {
+	zoom: 1;
+}
+
+li.gallerybox {
+	vertical-align: top;
+	display: -moz-inline-box;
+	display: inline-block;
+}
 /* MediaWiki styles end */
