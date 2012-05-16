@@ -1,0 +1,39 @@
+{% load tagging_tags comments i18n %}
+{% load url from future %}
+<div id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %}">
+  <div class="entry-header">
+    <h2 class="entry-title">
+      <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
+        {{ object.title }}
+      </a>
+    </h2>
+  </div>
+
+  <div class="entry-body">
+    {% if object.image %}
+    <div class="entry-image">
+      <p>
+        {% if continue_reading %}
+        <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
+        {% endif %}
+          <img src="{{ object.image.url }}" alt="{{ object.title }}" class="left" />
+        {% if continue_reading %}
+        </a>
+        {% endif %}
+      </p>
+    </div>
+    {% endif %}
+    <div class="entry-content">
+      {{ object_content }}
+    </div>
+    {% if continue_reading %}
+    <p class="continue-reading">
+      <a href="{{ object.get_absolute_url }}"
+         title="{% blocktrans with object=object.title %}Continue reading {{ object }}{% endblocktrans %}"
+         rel="bookmark">
+        {% trans "Continue reading" %}
+      </a>
+    </p>
+    {% endif %}
+  </div>
+</div>
