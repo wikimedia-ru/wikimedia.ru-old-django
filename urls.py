@@ -19,8 +19,8 @@ urlpatterns = patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_ROOT}),
 
-    url(r'^comments/', include('django.contrib.comments.urls')),
-    url(r'^', include('zinnia.urls')),
+    url(r'^news/comments/', include('django.contrib.comments.urls')),
+    url(r'^news/', include('zinnia.urls')),
 
     #url(r'^(?:fund\/)?(.*?)(?:\.html|\/)?$', 'pages.views.page'),
     url(r'^(?P<section>[^/]+)/(?P<url>[^/]+)$', 'pages.views.page'),
