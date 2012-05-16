@@ -10,7 +10,7 @@ register = template.Library()
 
 @register.simple_tag
 def menu_list():
-    menu = MenuItem.objects.all()
+    menu = MenuItem.objects.order_by('order')
     
     return render_to_string('menu/tags/menu_list.html', {
         'menu': menu,
