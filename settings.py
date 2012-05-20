@@ -126,12 +126,13 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
+    'treemenus',
+
     'tagging',
     'mptt',
     'zinnia',
 
     'pages',
-    'menu',
     'donate',
 )
 

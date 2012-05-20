@@ -1,0 +1,11 @@
+{% load tree_menu_tags %}
+<li><a href="{{ menu_item.url }}">{{ menu_item.caption }}</a>
+	{% if menu_item.children %}
+	<ul>
+		{% for child_item in menu_item.children %}
+		{% show_menu_item child_item %}
+		{% endfor %}
+	</ul>
+	{% endif %}
+</li>
+

@@ -1,4 +1,4 @@
-{% load menu_extras %}
+{% load tree_menu_tags %}
 <!DOCTYPE html>
 <html lang="ru" xml:lang="ru">
 <head>
@@ -33,7 +33,7 @@
 </head>
 <body>
 	<nav>
-	{% menu_list %}
+	{% show_menu "Sidebar" %}
 	</nav>
 	<div id="wrap">
 		<article>
