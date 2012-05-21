@@ -112,10 +112,10 @@ nav>ul:first-child>li:first-child>a {
 
 article {
 	display: block;
-	padding: 45px 40px 0;
+	padding: 30px 40px 0;
 	margin-left: 160px;
 	max-width: 800px;
-	text-align: justify;
+	line-height: 1.3em;
 }
 
 footer {
