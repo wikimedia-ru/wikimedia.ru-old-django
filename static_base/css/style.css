@@ -72,13 +72,12 @@ nav {
 
 nav ul {
 	margin: 0;
-	padding: 0 0 0 30px;
+	padding: 0 0 0 20px;
 	list-style: none;
 }
 
 nav ul ul {
-	padding-left: 25px;
-	list-style: disc;
+	list-style: circle;
 }
 
 nav li {
@@ -94,7 +93,7 @@ nav a:hover {
 }
 
 nav>ul:first-child>li:first-child {
-	margin-left: -17px;
+	margin-left: -7px;
 	padding-bottom: 16px;
 }
 
