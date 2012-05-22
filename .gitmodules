@@ -1,0 +1,3 @@
+[submodule "static_base/social"]
+	path = static_base/social
+	url = git://github.com/Incwadra/HabraPack.git
