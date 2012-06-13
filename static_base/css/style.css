@@ -25,7 +25,12 @@ abbr {
 	border: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: normal;
 	margin: 0;
 	overflow: hidden;
@@ -52,6 +57,8 @@ h3 {
 h4, h5, h6 {
 	font-size: 1em;
 }
+
+
 /* Reset end */
 
 
@@ -522,3 +529,33 @@ div.gallerytext {
 	margin-bottom: 50px;
 }
 /* Blog end */
+
+/* Index page begin */
+.index-block {
+	border: 1px solid #cedff2;
+	background: #f5faff;
+	margin: .5em;
+	padding: 0 1em 1em;;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.index-block ul {
+	padding-left: 1.5em;
+}
+
+.index-page h2 {
+	margin-bottom: 0.8em;
+}
+
+.index-img {
+	float: right;
+	margin: 0 0 .5em 1em;
+}
+
+.index-img img {
+	max-width: 200px;
+	max-height: 200px;
+}
+/* Index page end */

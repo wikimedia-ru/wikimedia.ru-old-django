@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load zinnia_tags %}
+
+{% block content %}
+<table class="index-page" align="center" width="100%">
+<tbody>
+
+<tr><td colspan="2">
+<div class="index-block" style="border-color:#cedff2; background:#f5faff; padding-top:1em;">
+<p><em>Представьте себе мир, в котором каждый человек обладает свободным доступом ко всем накопленным человечеством знаниям. Мы создаём такой мир.</em></p>
+<p>Некоммерческое партнерство содействия распространению энциклопедических знаний «<b>Викимедиа РУ</b>» — юридически самостоятельная некоммерческая организация, созданная для содействия на территории Российской Федерации развитию проектов, связанных с созданием и распространением свободной для использования энциклопедической, образовательной и иной информации, отражающей знания, накопленные человечеством. Ведущим проектом такого типа является свободная интернет-энциклопедия «Википедия», русскоязычный раздел которой является одним из основных объектов деятельности «Викимедиа РУ». НП «Викимедиа РУ» утверждено <a href="//wikimediafoundation.org/wiki/%D0%9F%D1%80%D0%B8%D1%91%D0%BC%D0%BD%D0%B0%D1%8F" title="wmf:Приёмная">Фондом Викимедиа</a> в качестве «<a href="//wikimediafoundation.org/wiki/%D0%A0%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8" title="wmf:Региональные организации">отделения Викимедиа</a>» на территории Российской Федерации. «Викимедиа РУ» действует на основании <a href="/about/bylaws" title="Устав">устава</a>, утвержденного Минюстом РФ 11 ноября 2008 (копии сертификатов можно посмотреть <a href="/about/certificates" title="Свидетельства">здесь</a>). <a href="/about/bylaws-en" title="Bylaws">Перевод на английский</a> <a href="//wikimediafoundation.org/w/index.php?title=Resolution:Approval_of_Wikimedia_Russia&amp;oldid=27200">утверждён</a> Советом попечителей «Фонда Викимедиа» 24 мая 2008.</p>
+</div>
+</td></tr>
+
+<tr>
+<td style="vertical-align:top; width:60%">
+
+<div class="index-block" style="border-color:#dfcef2; background:#faf5ff;">
+{% get_recent_entries 6 "index/recent_entries.html" %}
+</div>
+</td>
+
+<td style="vertical-align:top; width:40%">
+<div class="index-block" style="border-color:rgb(242, 223, 206); background:rgb(255, 250, 245);">
+<h2><a class="external text" href="//www.wikimedia.org/">Поддерживаемые проекты</a></h2>
+<table align="center" cellspacing="2" style="text-align:left; width:90%; background:transparent; line-height:1.25em" summary="Краткое описание других проектов Фонда Викимедиа и ссылки на них">
+<tbody><tr>
+<td style="text-align:center; width:50px"><a href="//ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="w:Заглавная страница"><img alt="w:" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wikipedia-logo-ru.png/24px-Wikipedia-logo-ru.png" width="24" height="28"></a></td>
+<td><a href="//ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="w:Заглавная страница"><b>Википедия</b></a><br>
+<small>Энциклопедия</small></td>
+</tr>
+<tr>
+<td style="text-align:center; width:50px"><a href="//ru.wiktionary.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="wikt:Заглавная страница"><img alt="wikt:" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Wiktionary-logo-ru.png/28px-Wiktionary-logo-ru.png" width="28" height="28"></a></td>
+<td><a href="//ru.wiktionary.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="wikt:Заглавная страница"><b>Викисловарь</b></a><br>
+<small>Словарь и тезаурус</small></td>
+</tr>
+<tr>
+<td style="text-align:center; width:56px"><a href="//ru.wikibooks.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="b:Заглавная страница"><img alt="b:" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/26px-Wikibooks-logo.svg.png" width="26" height="26"></a></td>
+<td><a href="//ru.wikibooks.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="b:Заглавная страница"><b>Викиучебник</b></a><br>
+<small>Учебники и руководства</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="//ru.wikiquote.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="q:Заглавная страница"><img alt="q:" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/24px-Wikiquote-logo.svg.png" width="24" height="28"></a></td>
+<td><a href="//ru.wikiquote.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="q:Заглавная страница"><b>Викицитатник</b></a><br>
+<small>Коллекция цитат</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="//ru.wikinews.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="n:Заглавная страница"><img alt="n:" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png" width="40" height="23"></a></td>
+<td><a href="//ru.wikinews.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="n:Заглавная страница"><b>Викиновости</b></a><br>
+<small>Новости</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="//ru.wikisource.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="s:Заглавная страница"><img alt="s:" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/26px-Wikisource-logo.svg.png" width="26" height="27"></a></td>
+<td><a href="//ru.wikisource.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="s:Заглавная страница"><b>Викитека</b></a><br>
+<small>Оригинальные тексты</small></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="//ru.wikiversity.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="v:Заглавная страница"><img alt="v:" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/28px-Wikiversity-logo.svg.png" width="28" height="22"></a></td>
+<td><a href="//ru.wikiversity.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="v:Заглавная страница"><b>Викиверситет</b></a><br>
+<small>Обучение</small></td>
+</tr>
+</tbody></table>
+</div>
+
+<div class="index-block" style="border-color:rgb(223, 242, 206); background:rgb(250, 255, 245);">
+<h2><a href="/initiatives">Текущие проекты</a></h2>
+<ul>
+<li><a href="initiatives/grants">Программные гранты</a></li>
+<li><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%BB%D1%8E%D0%B1%D0%B8%D1%82_%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3_%272011" title="Википедия любит Петербург '2011">Википедия любит Петербург '2011</a> (<a href="/wiki/%C2%AB%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%BB%D1%8E%D0%B1%D0%B8%D1%82_%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%C2%BB%272011:_%D0%BF%D0%BE%D0%B1%D0%B5%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B8" title="«Википедия любит Петербург»'2011: победители">конкурс завершён, определены победители, прошла выставка работ</a>)</li>
+<li><a href="/initiatives/litcom">Литературные стипендии</a></li>
+<li><a href="/wiki/%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE" title="Информационное общество">Информационное общество</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+<form id="powersearch" method="get" action="http://ru.wikipedia.org/w/index.php">
+<p style="text-align:center; margin:3em 0">
+	<img src="/media/index/wikipedia-32.png" alt="Википедия" width="32" height="32" style="position:relative; top:12px; margin-right:4px" />
+	<input type="hidden" name="title" value="Служебная:Search" />
+	<input type="hidden" name="ns0" value="1" />
+	<input name="search" size="50" type="text" id="powerSearchText" placeholder="Поиск по Википедии" />
+	<input type="submit" value="Найти" name="fulltext" />
+</p> 
+</form>
+{% endblock %}

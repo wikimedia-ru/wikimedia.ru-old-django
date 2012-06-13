@@ -1,16 +1,10 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.conf import settings
-
-# Uncomment the next two lines to enable the admin:
+from django.views.generic.simple import direct_to_template
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'wmru.views.home', name='home'),
-    # url(r'^wmru/', include('wmru.foo.urls')),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
@@ -22,10 +16,7 @@ urlpatterns = patterns('',
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/', include('zinnia.urls')),
 
-    #url(r'^(?:fund\/)?(.*?)(?:\.html|\/)?$', 'pages.views.page'),
+    url(r'^$', direct_to_template, {'template': 'index/index.html'}),
     url(r'^(?P<section>[^/]+)/(?P<url>[^/]+)$', 'pages.views.page'),
     url(r'^(?P<url>[^/]*)$', 'pages.views.page'),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 )
