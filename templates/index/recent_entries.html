@@ -4,7 +4,7 @@
 {% if forloop.counter == 1 %}
 <h2><a href="{{ entry.get_absolute_url }}" title="{{ entry.title }}" rel="bookmark">{{ entry.title }}</a></h2>
 <div>
-	{% if entry.image.url %}<a class="index-img" href="{{ entry.get_absolute_url }}" title="{{ entry.title }}" rel="bookmark"><img src="{{ entry.image.url }}" /></a>{% endif %}
+	{% if entry.image %}<a class="index-img" href="{{ entry.get_absolute_url }}" title="{{ entry.title }}" rel="bookmark"><img src="{{ entry.image.url }}" /></a>{% endif %}
 	{{ entry.content|removetags:"img table thead tbody tr th td br"|truncatewords_html:100|safe }}
 </div>
 <h2><a href="/blog/">Другие записи в блоге</a></h2>
