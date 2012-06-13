@@ -8,7 +8,7 @@ from donate.models import Donation
 
 
 def donations_list(request):
-    d_list = Donation.objects.order_by('order')
+    d_list = Donation.objects.filter(active=True).order_by('order')
     '''
     for d_item in d_list:
         if d_item.phone_id.find('=') >= 0:
