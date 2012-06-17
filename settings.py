@@ -171,6 +171,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
 )
 
+ZINNIA_COPYRIGHT = 'Wikimedia RU, CC-BY 2.5'
+ZINNIA_AUTHOR_NAME = 'Wikimedia RU'
+ZINNIA_AUTHOR_EMAIL = 'info@wikimedia.ru'
+
 # Local settings
 from settings_local import *
 
