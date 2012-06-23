@@ -525,8 +525,34 @@ div.gallerytext {
 	clear: both;
 }
 
+.entry-image {
+	float: right;
+	margin: 0 0 .5em 1.5em;
+}
+
+.entry-image img {
+	max-width: 400px;
+	max-height: 300px;
+}
+
 .entry-footer {
 	margin-bottom: 50px;
+}
+
+.paginator {
+	clear: both;
+	padding: 50px 0 0;
+}
+
+.paginator li {
+	list-style: none;
+	display: inline;
+	font-size: 1.3em;
+	margin: 0 .2em;
+}
+
+.paginator li.index {
+	display: none;
 }
 /* Blog end */
 
