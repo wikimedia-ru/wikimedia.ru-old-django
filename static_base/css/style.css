@@ -77,6 +77,12 @@ nav {
 	height: 100%;
 }
 
+nav>ul {
+	z-index: 2;
+	position: relative;
+	background: inherit;
+}
+
 nav ul {
 	margin: 0;
 	padding: 0 0 0 20px;
