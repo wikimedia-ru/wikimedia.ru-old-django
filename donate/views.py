@@ -1,14 +1,12 @@
 import re
 
-from django.views.decorators.csrf import csrf_exempt
-from django.template.response import TemplateResponse
+from django.template.loader import render_to_string
 from django.template import RequestContext
 
 from donate.models import Donation
 
 
 
-@csrf_exempt
 def donations_list(request):
     d_list = Donation.objects.filter(active=True).order_by('order')
     '''
@@ -19,6 +17,6 @@ def donations_list(request):
             d_item.amount_tpl = '<span class="d-tpl">' + re.sub(r'\[(?P<id>[^\[\]=]+)=(?P<len>[^\[\]=]+)\]', '<input type="text" name="\g<id>" maxlength="\g<len>" size="\g<len>" placeholder="" required="required" />', d_item.amount_id) + '</span>'
     '''
     
-    return TemplateResponse(request, 'donate/donations_list.html', {
+    return render_to_string('donate/donations_list.html', {
         'donations': d_list,
-        })
+        }, context_instance=RequestContext(request))
