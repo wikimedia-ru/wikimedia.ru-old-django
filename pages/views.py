@@ -7,6 +7,7 @@ from hyphenator import Hyphenator
 from django.utils.translation import ugettext_lazy as _
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext, Lexer, TOKEN_BLOCK
+from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponsePermanentRedirect
 
 from pages.models import Page
@@ -19,6 +20,7 @@ enabled_tags = {
     }
 
 
+@csrf_exempt
 def page(request, url, section = None):
     
     try:
