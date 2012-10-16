@@ -19,6 +19,6 @@ def donations_list(request):
             d_item.amount_tpl = '<span class="d-tpl">' + re.sub(r'\[(?P<id>[^\[\]=]+)=(?P<len>[^\[\]=]+)\]', '<input type="text" name="\g<id>" maxlength="\g<len>" size="\g<len>" placeholder="" required="required" />', d_item.amount_id) + '</span>'
     '''
     
-    return TemplateResponse('donate/donations_list.html', {
+    return TemplateResponse(request, 'donate/donations_list.html', {
         'donations': d_list,
         })
