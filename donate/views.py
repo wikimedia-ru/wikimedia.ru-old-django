@@ -1,5 +1,6 @@
 import re
 
+from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 from django.template import RequestContext
 
@@ -7,6 +8,7 @@ from donate.models import Donation
 
 
 
+@csrf_exempt
 def donations_list(request):
     d_list = Donation.objects.filter(active=True).order_by('order')
     '''
