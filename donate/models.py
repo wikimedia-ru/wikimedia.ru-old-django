@@ -7,7 +7,7 @@ class Donation(models.Model):
     icon = models.ImageField(upload_to='donations', blank=True, null=True, verbose_name=_("Icon"))
     title = models.CharField(max_length=200, verbose_name=_("Title"))
     anchor = models.SlugField(max_length=50, verbose_name=_("Anchor"))
-    color = models.CharField(max_length=20, verbose_name=_("Background color"))
+    color = models.CharField(max_length=50, verbose_name=_("Background color"))
     order = models.PositiveIntegerField(verbose_name=_("Order"))
     active = models.BooleanField(default=True, verbose_name=_("Active"))
 
