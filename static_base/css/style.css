@@ -409,6 +409,9 @@ body:before {
 #donations>li .d-note {
 	font-size: smaller;
 }
+#donate-dengionline h3 a span {
+	color: #000;
+}
 /* Donations end */
 
 /* Firefox 2 hacks begin */
