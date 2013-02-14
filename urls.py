@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^blog/', include('zinnia.urls')),
 
     url(r'^$', direct_to_template, {'template': 'index/index.html'}),
-    url(r'^donations/callback', direct_to_template, {'template': 'donate/callback.xml'}),
+    url(r'^donations/callback', 'donate.views.dengionline_callback'),
     url(r'^(?P<section>[^/]+)/(?P<url>[^/]+)$', 'pages.views.page'),
     url(r'^(?P<url>[^/]*)$', 'pages.views.page'),
 )
