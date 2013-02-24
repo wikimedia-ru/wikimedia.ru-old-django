@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_ROOT}),
 
+    url(r'^robots.txt$', 'django.views.static.serve', {'path':"/robots.txt",'document_root': settings.STATIC_ROOT, 'show_indexes': False }),
+
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/', include('zinnia.urls')),
 
