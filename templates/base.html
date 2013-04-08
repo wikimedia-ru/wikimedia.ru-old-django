@@ -33,6 +33,13 @@
 	{% endblock %}
 </head>
 <body>
+	<div id="wrap">
+		<article>
+		{% block content %}
+			Empty!
+		{% endblock %}
+		</article>
+	</div>
 	<nav>
 		{% show_menu "Sidebar" %}
 		<div class="social">
@@ -42,13 +49,6 @@
 			<a href="/blog/feeds/latest/"><img src="{{ STATIC_URL }}social/rss.png" width="24" height="24" alt="RSS" /></a>
 		</div>
 	</nav>
-	<div id="wrap">
-		<article>
-		{% block content %}
-			Empty!
-		{% endblock %}
-		</article>
-	</div>
 	<footer>
 		Содержимое доступно по лицензии <a href="//creativecommons.org/licenses/by/2.5/deed.ru">Creative Commons Attribution 2.5 Generic</a> и более поздних версий, если не указаны другие условия.
 	</footer>
